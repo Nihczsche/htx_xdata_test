@@ -1,8 +1,8 @@
-from typing import Union
 from transformers import Wav2Vec2ForCTC, Wav2Vec2Processor
 import soundfile as sf
 import torch
 import array as arr
+import librosa
 
 from fastapi import FastAPI, UploadFile
 from fastapi.responses import PlainTextResponse, RedirectResponse
@@ -10,17 +10,21 @@ import starlette.status as status
 
 app = FastAPI()
 
-model = Wav2Vec2ForCTC.from_pretrained("facebook/wav2vec2-large-960h").to("cuda")
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+model = Wav2Vec2ForCTC.from_pretrained("facebook/wav2vec2-large-960h").to(device)
 processor = Wav2Vec2Processor.from_pretrained("facebook/wav2vec2-large-960h")
 
 def predict(audio_data : arr.array, sampling_rate : int):
-    input_values = processor(audio_data, sampling_rate=sampling_rate, return_tensors="pt", padding="longest").input_values
+    if sampling_rate != processor.feature_extractor.sampling_rate:
+        audio_data = librosa.resample(audio_data, orig_sr=sampling_rate, target_sr=processor.feature_extractor.sampling_rate)
+
+    input_values = processor(audio_data, sampling_rate=processor.feature_extractor.sampling_rate, return_tensors="pt", padding="longest").input_values
 
     with torch.no_grad():
-        logits = model(input_values.to("cuda")).logits
+        logits = model(input_values.to(device)).logits
 
     predicted_ids = torch.argmax(logits, dim=-1)
-    transcription = processor.batch_decode(predicted_ids)
+    transcription = processor.batch_decode(predicted_ids)[0]
 
     return transcription
 
