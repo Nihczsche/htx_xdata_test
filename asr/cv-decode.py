@@ -28,11 +28,12 @@ def main():
             gentext_dict[filename] = rjson["transcription"]
 
     df["generated_text"] = df["filename"].map(gentext_dict)
+    df["generated_text"] = df["generated_text"].astype(str)
 
     if args.csv_output is None:
-        df.to_csv(args.csv_input)
+        df.to_csv(args.csv_input, index=False)
     else:
-        df.to_csv(args.csv_output)
+        df.to_csv(args.csv_output, index=False)
 
 if __name__ == "__main__":
     main()

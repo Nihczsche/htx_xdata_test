@@ -1,4 +1,5 @@
 from transformers import Wav2Vec2ForCTC, Wav2Vec2Processor
+from huggingface_hub import snapshot_download
 import soundfile as sf
 import torch
 import array as arr
