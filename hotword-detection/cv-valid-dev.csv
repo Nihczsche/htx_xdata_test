@@ -2,7 +2,7 @@ filename,text,up_votes,down_votes,age,gender,accent,duration,generated_text,fine
 cv-valid-dev/sample-000000.mp3,be careful with your prognostications said the stranger,1,0,,,,,BE CAREFUL WITH YOUR PROGNOSTICATIONS SAID THE STRANGER,BE CAREFUL WITH YOUR PROGNOSTICATIONS SAID THE STRANGER,True
 cv-valid-dev/sample-000001.mp3,then why should they be surprised when they see one,2,0,,,,,THEN WHY SHOULD THEY BE SURPRISED WHEN THEY SEE ONE,THEN WHY SHOULD THEY BE SURPRISED WHEN THEY SEE ONE,False
 cv-valid-dev/sample-000002.mp3,a young arab also loaded down with baggage entered and greeted the englishman,2,0,,,,,A YOUNG ARAB ALSO LOADED DOWN WITH BAGGAGE ENTERED AND GREETED THE ENGLISHMAN,A YOUNG ARAB ALSO LOADED DOWN WITH BAGGAGE ENTERED AND GREETED THE ENGLISHMAN,False
-cv-valid-dev/sample-000003.mp3,i thought that everything i owned would be destroyed,3,0,,,,,I FELT THAT EVERYTHING I OWNED WOULD BE DESTROYED,I THOUGHT THAT EVERYTHING I OWNED WOULD BE DESTROYED,False
+cv-valid-dev/sample-000003.mp3,i thought that everything i owned would be destroyed,3,0,,,,,I FELT THAT EVERYTHING I OWNED WOULD BE DESTROYED,I THOUGHT THAT EVERYTHING I OWNED WOULD BE DESTROYED,True
 cv-valid-dev/sample-000004.mp3,he moved about invisible but everyone could hear him,1,0,fourties,female,england,,HE MOVED ABOUT INVISIBLE BUT EVERY ONE COULD HEAR HIM,HE MOVED ABOUT INVISIBLE BUT EVERYONE COULD HEAR HIM,False
 cv-valid-dev/sample-000005.mp3,but everything had changed,3,0,teens,male,us,,BUT EVERYTHING HAD CHANGED,BUT EVERYTHING HAD CHANGED,False
 cv-valid-dev/sample-000006.mp3,are you sure this is claire,2,0,,,,,ARE YOU SURE DIS IS CLAIRE,ARE YOU SURE THIS IS CLAIRE,False
@@ -2452,7 +2452,7 @@ cv-valid-dev/sample-002449.mp3,but he didn't need to worry about that right now,
 cv-valid-dev/sample-002450.mp3,he could always become a crystal salesman again,1,0,,,,,HE COULD ALWAYS BECOME A CRYSTAL SALESMAN AGAIN,HE COULD ALWAYS BECOME A CRYSTAL SALESMAN AGAIN,False
 cv-valid-dev/sample-002451.mp3,i wonder how many times a year this happens,1,0,,,,,I WONDER HOW MANY TIMES A YEAR THIS HAPPENS,I WONDER HOW MANY TIMES ARE YEAR THIS HAPPENS,False
 cv-valid-dev/sample-002452.mp3,i encourage everyone to contribute their voice to project common voice,1,0,fifties,male,england,,I ENCOURAGE EVERY ONE TO CONTRIBUTE THEIR VOICE TO PROJECT COMMON VOICE,I ENCOURAGE EVERYONE TO CONTRIBUTE THEIR VOICE TO PROJECT COMMON VOICE,False
-cv-valid-dev/sample-002453.mp3,i don't like people to do that because the sheep are afraid of strangers,2,0,,,,,I DON'T LIKE PEOPLE TO DO THAT BECAUSE THE SHEEP ARE AFRAID OF STRANGERS,I DON'T LIKE PEOPLE TO DO THAT BECAUSE THE SHEEP ARE AFRAID OF STRANGERS,False
+cv-valid-dev/sample-002453.mp3,i don't like people to do that because the sheep are afraid of strangers,2,0,,,,,I DON'T LIKE PEOPLE TO DO THAT BECAUSE THE SHEEP ARE AFRAID OF STRANGERS,I DON'T LIKE PEOPLE TO DO THAT BECAUSE THE SHEEP ARE AFRAID OF STRANGERS,True
 cv-valid-dev/sample-002454.mp3,a card hanging in the doorway announced that several languages were spoken in the shop,2,0,,,,,A CARD HANGING IN THE DOORWAY ANNOUNCED THAT SEVERAL LANGUAGES WERE SPOKEN IN THE SHOP,A CARD HANGING IN THE DOORWAY ANNOUNCED THAT SEVERAL LANGUAGES WERE SPOKEN IN THE SHOP,False
 cv-valid-dev/sample-002455.mp3,i don't know why i came here in the first place,1,0,,,,,I DON'T KNOW WHY I CAME HERE IN THE FIRST PLACE,I DON'T KNOW WHY I CAME HERE IN THE FIRST PLACE,False
 cv-valid-dev/sample-002456.mp3,he was proud of himself,1,0,,,,,HE WAS PROUD OF HIMSELF,HE WAS PROUD OF HIMSELF,False

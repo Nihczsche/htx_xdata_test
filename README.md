@@ -29,6 +29,7 @@ For Q2(e), from the parent directory, first build the docker image with the foll
 docker build . -t asr-api:v1
 To start a container, use the following command:
 docker run -p 8001:8001 --name <container name> -d asr-api:v1
+The container would need some time to cache the model, hence it is recommended to wait a while before using the API.
 
 # Question 3
 

@@ -4,6 +4,11 @@ import argparse
 import os
 
 def main():
+    """
+    Python script which sends an audio file to a transcription web service and passes the returned text to the output CSV file.
+    If no output csv file is provided, the generated text is appended to the input CSV file
+    """
+
     parser = argparse.ArgumentParser()
     parser.add_argument("--url", default="http://localhost:8001/asr", help="URL to send POST request",
                         type=str)
@@ -11,7 +16,7 @@ def main():
                         type=str)
     parser.add_argument("--csv-output", default=None, help="Path to store CSV file. If not provided, 'generated_text' column is added to input csv by default.",
                         type=str)
-    parser.add_argument("--directory", help="Directory path containing all audio files for transcription",
+    parser.add_argument("--directory", required=True, help="Directory path containing all audio files for transcription",
                         type=str)
     args = parser.parse_args()
 
