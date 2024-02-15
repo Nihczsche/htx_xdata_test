@@ -13,6 +13,8 @@ Solution for Q6 is placed in the main repository as essay-ssl.pdf.
 # Question 1
 
 .gitignore files and requirements.txt are placed in the main repository together with this README.md file. The requirements file lists all the packages used for the entire test.
+To install all dependencies, from the main directory, run the following command:
+pip install -r requirements.txt
 
 # Question 2
 
@@ -29,7 +31,6 @@ For Q2(e), from the parent directory, first build the docker image with the foll
 docker build . -t asr-api:v1
 To start a container, use the following command:
 docker run -p 8001:8001 --name <container name> -d asr-api:v1
-The container would need some time to cache the model, hence it is recommended to wait a while before using the API.
 
 # Question 3
 

@@ -4,6 +4,7 @@ import soundfile as sf
 import torch
 import array as arr
 import librosa
+import os
 
 from fastapi import FastAPI, HTTPException, UploadFile
 from fastapi.responses import PlainTextResponse, RedirectResponse
@@ -11,10 +12,17 @@ import starlette.status as status
 
 app = FastAPI()
 
+MODEL_NAME = "wav2vec2-large-960h"
+MODEL_PATH = os.path.join(os.path.dirname(os.path.realpath(__file__)), MODEL_NAME)
+
+pretrained_model_name_or_path = "facebook/wav2vec2-large-960h"
+if os.path.exists(MODEL_PATH):
+    pretrained_model_name_or_path = MODEL_PATH
+
 # Load the model and processor
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-model = Wav2Vec2ForCTC.from_pretrained("facebook/wav2vec2-large-960h").to(device)
-processor = Wav2Vec2Processor.from_pretrained("facebook/wav2vec2-large-960h")
+model = Wav2Vec2ForCTC.from_pretrained(pretrained_model_name_or_path).to(device)
+processor = Wav2Vec2Processor.from_pretrained(pretrained_model_name_or_path)
 
 def predict(audio_data : arr.array, sampling_rate : int):
     """
