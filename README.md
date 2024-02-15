@@ -34,9 +34,9 @@ docker run -p 8001:8001 --name <container name> -d asr-api:v1
 
 # Question 3
 
-Q3(a) and Q3(c) solution is provided in asr-train/cv-train-2a.ipynb
+Q3(a) and Q3(c) solution is provided in asr-train/cv-train-2a.ipynb. Modify the CV_DIRECTORY and REPO_NAME to the appropriate paths.
 
-For Q3(b), the checkpoint from pytorch is zipped for future inference. Due to its large size, it is not uploaded into the repository.
+For Q3(b), model is saved as wav2vec2-large-960h. Due to its large size, it is not uploaded into the repository.
 
 # Question 4
 
