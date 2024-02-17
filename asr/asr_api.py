@@ -48,7 +48,7 @@ def predict(audio_data : arr.array, sampling_rate : int):
     return transcription
 
 @app.get("/")
-async def redirect_docs():
+def redirect_docs():
     """
     Redirects any requests for the main page to the docs page
 
@@ -59,7 +59,7 @@ async def redirect_docs():
 # UploadFile is a wrapper for SpooledTemporaryFile, and is expected to be destroyed as soon as the file is closed
 # See https://docs.python.org/3/library/tempfile.html#tempfile.SpooledTemporaryFile for more details
 @app.post("/asr")
-async def transcribe_audio(file: UploadFile):
+def transcribe_audio(file: UploadFile):
     """
     Reads an uploaded audio file into an array type, transcribes then returns the text
     as a Json containing the transcribed string and audio file duration
@@ -81,7 +81,7 @@ async def transcribe_audio(file: UploadFile):
     }
 
 @app.get("/ping", response_class=PlainTextResponse)
-async def ping():
+def ping():
     """
     API to return pong on ping GET request
 
