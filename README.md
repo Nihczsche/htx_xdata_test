@@ -28,8 +28,8 @@ See https://github.com/google/sentencepiece/issues/378 for more details.
 # Question 2
 
 Q2(a) to (c) solution is provided in asr/asr_api.py. To run the API web server, use the following steps:  
-1. pip install all the packages listed in the asr/requirements.txt file (pip install --upgrade -r asr/requirements.txt)  
-2. From the main directory, open a terminal and run the command:
+
+1. From the main directory, open a terminal and run the command:
 ```
 uvicorn asr.asr_api:app --reload --host 0.0.0.0 --port 8001
 ```
