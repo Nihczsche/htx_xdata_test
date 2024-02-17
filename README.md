@@ -18,6 +18,12 @@ To install all dependencies, from the main directory, run the following command:
 pip install -r requirements.txt
 ```
 
+Note: If the installation fails during sentencepiece installation, ensure that the following packages are installed:
+```
+sudo apt-get install cmake build-essential pkg-config libgoogle-perftools-dev
+```
+See https://github.com/google/sentencepiece/issues/378 for more details.
+
 # Question 2
 
 Q2(a) to (c) solution is provided in asr/asr_api.py. To run the API web server, use the following steps:  
